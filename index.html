@@ -1,85 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-
-body {
-  background-color:rgb(225, 230, 229);
-}
-
-/* Size, colour and border style of Navigation Bar */
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid #e7e7e7;
-  background-color: #f3f3f3;
-}
-
-/* All list items will be left aligned unless otherwise stated in future code. */
-
-li {
-  float: left;
-}
-
-/* Any item assigned to this class, 'a', will have the following properties. */
-
-li a {
-  display: block;
-  color: #666;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-  
-/* Sets the font and background colour. */
-  li a.active {
-  color: white;
-  background-color: #80c2aa;
-}
- 
-/* Any item assigned to this class, 'b', will have the following properties. */
-
-  li b {
-  display: block;
-  color: #666;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
- /* Sets the font and background colour. */
-  li b.active {
-  color: white;
-  background-color: #91c1ed;
-}
-  
-</style>
+	<title>index.html</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
+
+<style>body {
+  background-color:rgb(227, 228, 232);
+}
+</style>
 <body>
 
-<!-- Sets up the item name and location in the horizontal navigation bar and assigns them a style 'a' or 'b'. -->
+<!-- Change md to sm for smaller screens. -->
 
-<ul>
-  <li><a class="active" href="#home">Latitude</a></li>
-  <li style="float:right"><b class="active" href="#data">Data</b></li>
-  <li style="float:right"><b class="active" href="#comparison">Comparison</b></li>
-  <li style="float:right"><b class="active" href="#plots">Plots</b></li>
-</ul>
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="index.html">Latitude Vs X</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#PlotList">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="PlotList">
+    <ul class="navbar-nav ml-auto">
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Plots
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="temp.html">Temperature</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="humidity.html">Humidity</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="data.html">Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="comparisons.html">Comparisons</a>
+      </li> 
+    </ul>
+  </div>
+</nav>
 
 </body>
+</body>
+<br>
+
+<!-- Creates the Overall Grid -->
+<div class="container">
+
+  <!-- Row 1 -->
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Task Description: Latitude vs. X</h1>
+      </div>
+    </div>
+    <br>
+
+  <!-- Row 2 -->
+    <div class="row">
+      <div class="col-md-4">
+        <p><img src="visualisations/TempVLatitude.png" alt="Temperature vs. Latitude" width="350" align="left">
+        </div>
+    <div class="col-md-8">
+      <p>The purpose of this project was to use the OpenWeatherMap API weather data to collect temperature, humidity, wind-speed and cloudiness data from randomly selected cities across the globe. 
+          In this particular investigation, 627 cities were analysed. <br><br>
+          Of particular interest to us was the relationship between each of these metrics and the latitudes of the cities the measurements were taken from. <br><br>
+          Was there a pattern in tempertaures as you approached the equator?<br>
+          Was there a link between cloudiness and your proximity to the North or South Pole?</p>
+    </div>
+  </div>
+
+  <div class="col col-12">
+    <br>
+    <p>After compiling and cleaning the data sets, MatPlotLib was used to create visualisations of the data. Thumbnails of those constructions can be seen below. 
+       To see a more detailed analysis of a particular graph, simply click on it.
+      The raw data can be found by clicking on the 'data' icon in the navigation bar above.
+    A larger and more easily read 'side-by-side' comparison of the graphs can be viewed by clicking the 'comparisons' icon on the navigation bar. </p><br><br> 
+  </div>
+
+    <h2>Visualisations</h2>
+    <hr><br>
+    <div class='row'>
+      <div class="col col-3 col-md-6">
+        <a href="temp.html"><img src="visualisations/TempVLatitude.png" alt="Temperature Vs Latitude"></a>
+      </div>
+      <div class="col col-3 col-md-6">
+        <a href="humidity.html"><img src="visualisations/HumVLatitude.png" alt="Humidity Vs Latitude"></a>
+      </div>
+      <div class="col col-3 col-md-6">
+        <a href="cloudiness.html"><img src="visualisations/CloudVLatitude.png" alt="Cloudiness Vs Latitude"></a>
+      </div>
+      <div class="col col-3 col-md-6">
+        <a href="windspeed.html"><img src="visualisations/WindSVLatitude.png" alt="Wind Speed Vs Latitude "></a>
+      </div>
+    </div>
+</div><br>
+
+<!-- Signature -->
+
+<div class="row">
+  <div class="col col-12 divbtm"> --- Authored by Chris Burley (2022) ---</div>
+</div>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
 
