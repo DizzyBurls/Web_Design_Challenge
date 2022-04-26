@@ -2,6 +2,9 @@
 <html>
 <head>
 <style>
+
+/* Style Set-Up of Navigation Bar */
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -11,9 +14,13 @@ ul {
   background-color: #f3f3f3;
 }
 
+/* All list items will be left aligned unless otherwise stated in future code. */
+
 li {
   float: left;
 }
+
+/* Any item assigned to this class, 'a', will have the following properties. */
 
 li a {
   display: block;
@@ -23,6 +30,18 @@ li a {
   text-decoration: none;
 }
   
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+/* Sets the font and background colour. */
+  li a.active {
+  color: white;
+  background-color: #80c2aa;
+}
+ 
+/* Any item assigned to this class, 'b', will have the following properties. */
+
   li b {
   display: block;
   color: #666;
@@ -31,19 +50,11 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
-  background-color: #ddd;
-}
-  
   li b:hover:not(.active) {
   background-color: #ddd;
 }
 
-  li a.active {
-  color: white;
-  background-color: #80c2aa;
-}
-  
+ /* Sets the font and background colour. */
  li b.active {
  color: white;
  background-color: #91c1ed;
@@ -53,11 +64,13 @@ li a:hover:not(.active) {
 </head>
 <body>
 
+<!-- Sets up the items in the horizontal navigation bar and assigns them a colour scheme ''a' or 'b'. -->
+
 <ul>
   <li><a class="active" href="#home">Latitude</a></li>
-  <li style="float:right"><b class="active" href="#about">Data</b></li>
-  <li style="float:right"><b class="active" href="#about">Comparison</b></li>
-  <li style="float:right"><b class="active" href="#about">Plots</b></li>
+  <li style="float:right"><b class="active" href="#data">Data</b></li>
+  <li style="float:right"><b class="active" href="#comparison">Comparison</b></li>
+  <li style="float:right"><b class="active" href="#plots">Plots</b></li>
 </ul>
 
 </body>
