@@ -13,9 +13,10 @@
   background-color:rgb(227, 228, 232);
 }
 </style>
+
 <body>
 
-<!-- Change md to sm for smaller screens. -->
+<!-- Build the Navigation Bar. -->
 
 <nav class="navbar navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="index.html">Latitude Vs X</a>
@@ -26,6 +27,8 @@
   <div class="collapse navbar-collapse" id="PlotList">
     <ul class="navbar-nav ml-auto">
       </li>
+
+<!-- Build a Dropdown List and assign HTML pages to each list item. -->
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Plots
@@ -50,65 +53,55 @@
   </div>
 </nav>
 
-</body>
-</body>
-<br>
-
 <!-- Creates the Overall Grid -->
 <div class="container">
 
-  <!-- Row 1 -->
-    <div class="row">
-      <div class="col-md-12">
-        <h1>Task Description: Latitude vs. X</h1>
-      </div>
-    </div>
-    <br>
-
-  <!-- Row 2 -->
-    <div class="row">
-      <div class="col-md-4">
-        <p><img src="visualisations/TempVLatitude.png" alt="Temperature vs. Latitude" width="350" align="left">
-        </div>
+<!-- Row 1 Column 1-->
+  <div class="row">
     <div class="col-md-8">
-      <p>The purpose of this project was to use the OpenWeatherMap API weather data to collect temperature, humidity, wind-speed and cloudiness data from randomly selected cities across the globe. 
-          In this particular investigation, 627 cities were analysed. <br><br>
-          Of particular interest to us was the relationship between each of these metrics and the latitudes of the cities the measurements were taken from. <br><br>
-          Was there a pattern in tempertaures as you approached the equator?<br>
-          Was there a link between cloudiness and your proximity to the North or South Pole?</p>
+      <div class="col-md-12">
+        <h1 style="color:rgb(57, 135, 101)">Task Description: Latitude vs. X</h1><br>
+          <img src="visualisations/TempVLatitude.png" class= "imagemain" alt="Temperature vs. Latitude" title="Temperature vs. Latitude" width="50%" align="left">
+            <p>The purpose of this project was to use the OpenWeatherMap API weather data to collect temperature, humidity, wind-speed and cloudiness data from randomly selected cities across the globe. 
+            In this particular investigation, 627 cities were analysed. <br><br>
+            Of particular interest to us was the relationship between each of these metrics and the latitudes of the cities the measurements were taken from. <br></p>
+            <p>Was there a pattern in tempertaures as you approached the equator?<br>
+              Was there a link between cloudiness and your proximity to the North or South Pole?<br><br>
+              After compiling and cleaning the data sets, MatPlotLib was used to create visualisations of the data. Thumbnails of those constructions can be seen below. 
+              To see a more detailed analysis of a particular graph, simply click on it.
+              The raw data can be found by clicking on the 'data' icon in the navigation bar above.
+            A larger and more easily read 'side-by-side' comparison of the graphs can be viewed by clicking the 'comparisons' icon on the navigation bar. </p><br>
+          </div>
+      </div>
+
+<!-- Row 1 Column 2-->
+  <div class="col-md-4">
+    <div class="col-md-12"></div>
+    <h1>Visualisations</h1>
+        <div class="row">
+            <div class="col-3 col-md-6">
+                <a href="temp.html"><img src="visualisations/TempVLatitude.png" class="imagethumbs" width="100%"  alt="Temperature Vs Latitude" title="Temperature vs. Latitude"></a> 
+            </div>
+            <div class="col-3 col-md-6">
+                <a href="humidity.html"><img src="visualisations/HumVLatitude.png" class="imagethumbs" width="100%" alt="Humidity Vs Latitude" title="Humidity vs. Latitude"></a>
+            </div>
+            <div class="col-3 col-md-6">
+                <a href="cloudiness.html"><img src="visualisations/CloudVLatitude.png" class="imagethumbs" width="100%"  alt="Cloudiness Vs Latitude" title="Cloudiness vs. Latitude"></a>
+            </div>
+            <div class="col-3 col-md-6">
+                <a href="windspeed.html"><img src="visualisations/WindSVLatitude.png" class="imagethumbs" width="100%"  alt="Wind Speed Vs Latitude" title="Wind Speed vs. Latitude"></a>
+            </div>
+        </div>
     </div>
   </div>
 
-  <div class="col col-12">
-    <br>
-    <p>After compiling and cleaning the data sets, MatPlotLib was used to create visualisations of the data. Thumbnails of those constructions can be seen below. 
-       To see a more detailed analysis of a particular graph, simply click on it.
-      The raw data can be found by clicking on the 'data' icon in the navigation bar above.
-    A larger and more easily read 'side-by-side' comparison of the graphs can be viewed by clicking the 'comparisons' icon on the navigation bar. </p><br><br> 
-  </div>
-
-    <h2>Visualisations</h2>
-    <hr><br>
-    <div class='row'>
-      <div class="col col-3 col-md-6">
-        <a href="temp.html"><img src="visualisations/TempVLatitude.png" alt="Temperature Vs Latitude"></a>
-      </div>
-      <div class="col col-3 col-md-6">
-        <a href="humidity.html"><img src="visualisations/HumVLatitude.png" alt="Humidity Vs Latitude"></a>
-      </div>
-      <div class="col col-3 col-md-6">
-        <a href="cloudiness.html"><img src="visualisations/CloudVLatitude.png" alt="Cloudiness Vs Latitude"></a>
-      </div>
-      <div class="col col-3 col-md-6">
-        <a href="windspeed.html"><img src="visualisations/WindSVLatitude.png" alt="Wind Speed Vs Latitude "></a>
-      </div>
-    </div>
-</div><br>
-
+    
 <!-- Signature -->
-
-<div class="row">
-  <div class="col col-12 divbtm"> --- Authored by Chris Burley (2022) ---</div>
+<div class="container">
+  <div class="row">
+    <div class="col col-12 divbtm"> <h8 style="color:rgb(53, 125, 94)">--- Authored by Chris Burley (2022) ---</h8>
+    </div>
+  </div>
 </div>
 </body>
 </html>
