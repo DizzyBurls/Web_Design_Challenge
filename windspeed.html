@@ -1,47 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid #e7e7e7;
-  background-color: #f3f3f3;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: #666;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: #ddd;
-}
-
-li a.active {
-  color: white;
-  background-color: #04AA6D;
-}
-</style>
+	<title>windspeed.html</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
+
+<style>body {
+  background-color:rgb(227, 228, 232);
+}
+      
+</style>
+
 <body>
 
-<ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
+<!-- Build the Navigation Bar. -->
 
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="index.html">Latitude Vs X</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#PlotList">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="PlotList">
+    <ul class="navbar-nav ml-auto">
+      </li>
+
+<!-- Build a Dropdown List and assign HTML pages to each list item. -->
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Plots
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="temp.html">Temperature</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="humidity.html">Humidity</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="data.html">Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="comparisons.html">Comparisons</a>
+      </li> 
+    </ul>
+  </div>
+</nav>
+
+<!-- Creates the Overall Grid -->
+<div class="container">
+
+<!-- Row 1 Column 1-->
+  <div class="row">
+    <div class="col-md-8">
+      <div class="col-md-12">
+        <h1 style="color:rgb(57, 135, 101)">Wind Speed</h1><br>
+          <img src="visualisations/WindSVLatitude.png" class= "imagemainvis" alt="Wind Speed vs. Latitude" title="Wind Speed vs. Latitude" width="100%" align="left">
+            <p>There is no discernible correlation between latitude and wind speed. 
+              The vast majority of the data exists between a wind speed of 0 metres per second and 10 metres per second, regardless of latitude.<br><br>
+              It's a pity that the random generation of latitudes didn't produce some cities nearer the bottom of the globe. 
+              Perhaps winds are stronger as you approach the Antarctic. <br><br></p>
+          </div>
+      </div>
+
+<!-- Row 1 Column 2-->
+  <div class="col-md-4">
+    <div class="col-md-12"></div>
+    <h1>Visualisations</h1>
+        <div class="row">
+            <div class="col-3 col-md-6">
+                <a href="temp.html"><img src="visualisations/TempVLatitude.png" class="imagethumbs" width="100%"  alt="Temperature Vs Latitude" title="Temperature vs. Latitude"></a> 
+            </div>
+            <div class="col-3 col-md-6">
+                <a href="humidity.html"><img src="visualisations/HumVLatitude.png" class="imagethumbs" width="100%" alt="Humidity Vs Latitude" title="Humidity vs. Latitude"></a>
+            </div>
+            <div class="col-3 col-md-6">
+                <a href="cloudiness.html"><img src="visualisations/CloudVLatitude.png" class="imagethumbs" width="100%"  alt="Cloudiness Vs Latitude" title="Cloudiness vs. Latitude"></a>
+            </div>
+            <div class="col-3 col-md-6">
+                <a href="windspeed.html"><img src="visualisations/WindSVLatitude.png" class="thumbselected" width="100%"  alt="Wind Speed Vs Latitude" title="Wind Speed vs. Latitude"></a>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    
+<!-- Signature -->
+<div class="container">
+  <div class="row">
+    <div class="col col-12 divbtm"> <h8 style="color:rgb(53, 125, 94)">--- Authored by Chris Burley (2022) ---</h8><br><br>
+    </div>
+  </div>
+</div>
 </body>
 </html>
-
